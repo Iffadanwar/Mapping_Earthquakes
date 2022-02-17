@@ -9,12 +9,13 @@ attribution: 'Map data © <a href="https://www.openstreetmap.org/">OpenStreetMap
 });
 streets.addTo(map);
 
-let airportData = "https://raw.githubusercontent.com/iffadanwar/Mapping_Earthquakes/main/majorAirports.json";
+let airportData = "https://raw.githubusercontent.com/iffadanwar/Mapping_Earthquakes/Mapping_GeoJSON_Points/static/JS/majorAirports.json";
 
 // Grabbing our GeoJSON data.
 d3.json(airportData).then(function(data) {
     console.log(data);
-    L.geoJSON(data).addTo(map);
+  // Creating a GeoJSON layer with the retrieved data.
+  L.geoJSON(data).addTo(map);
 });
 
 // // Add GeoJSON data.
